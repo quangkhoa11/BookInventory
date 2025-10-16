@@ -55,26 +55,37 @@ if (isset($_SESSION['loaikh']) && $_SESSION['loaikh'] === 'Tổ chức') {
       </ul>
 
       <!-- Khu vực đăng nhập / đăng ký -->
-      <div class="d-flex align-items-center">
-        <?php if(isset($_SESSION['idkh'])): ?>
-          <span class="text-white mr-3 fw-semibold">Chào, <?= htmlspecialchars($_SESSION['tenkh']) ?></span>
-          <a href="index.php?page=dangxuat" class="btn btn-outline-light">
+      <!-- Khu vực đăng nhập / đăng ký -->
+<div class="d-flex align-items-center">
+    <?php if(isset($_SESSION['idkh'])): ?>
+        <?php
+            // Xác định link trang cá nhân
+            $profileLink = 'index.php?page=canhan'; // mặc định cho Cá nhân
+            if(isset($_SESSION['loaikh']) && $_SESSION['loaikh'] === 'Tổ chức'){
+                $profileLink = '#'; // hoặc trang của tổ chức nếu có
+            }
+        ?>
+        <a href="<?= $profileLink ?>" class="text-white mr-3 fw-semibold">
+            Chào, <?= htmlspecialchars($_SESSION['tenkh']) ?>
+        </a>
+        <a href="index.php?page=dangxuat" class="btn btn-outline-light">
             <i class="fas fa-sign-out-alt me-2"></i>Đăng xuất
-          </a>
-        <?php elseif(isset($_SESSION['idncc'])): ?>
-          <span class="text-white me-3 fw-semibold">Chào, <?= htmlspecialchars($_SESSION['tenncc']) ?></span>
-          <a href="index.php?page=dangxuat" class="btn btn-outline-light">
+        </a>
+    <?php elseif(isset($_SESSION['idncc'])): ?>
+        <span class="text-white me-3 fw-semibold">Chào, <?= htmlspecialchars($_SESSION['tenncc']) ?></span>
+        <a href="index.php?page=dangxuat" class="btn btn-outline-light">
             <i class="fas fa-sign-out-alt me-2"></i>Đăng xuất
-          </a>
-        <?php else: ?>
-          <a href="index.php?page=dangnhap" class="btn btn-outline-light mr-2">
+        </a>
+    <?php else: ?>
+        <a href="index.php?page=dangnhap" class="btn btn-outline-light mr-2">
             <i class="fas fa-sign-in-alt me-2"></i> Đăng nhập
-          </a>
-          <a href="index.php?page=dangky" class="btn btn-warning px-3">
+        </a>
+        <a href="index.php?page=dangky" class="btn btn-warning px-3">
             <i class="fas fa-user-plus me-2"></i> Đăng ký
-          </a>
-        <?php endif; ?>
-      </div>
+        </a>
+    <?php endif; ?>
+</div>
+
     </div>
   </div>
 </nav>
