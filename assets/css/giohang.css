@@ -1,0 +1,163 @@
+/* ============ Giỏ hàng ============ */
+main.container {
+    max-width: 1100px;
+    margin: 50px auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Tiêu đề */
+main h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+main p.text-muted {
+    font-size: 0.95rem;
+}
+
+/* Bảng giỏ hàng */
+.table-responsive {
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.table th {
+    background-color: #007bff;
+    color: white;
+    font-weight: 600;
+    vertical-align: middle;
+}
+
+.table td, .table th {
+    vertical-align: middle !important;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f5f5f5;
+    transition: all 0.2s ease;
+}
+
+/* Ảnh sách */
+.table img {
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.table img:hover {
+    transform: scale(1.05);
+}
+
+/* Input số lượng */
+.qtyInput {
+    border-radius: 8px;
+    padding: 4px;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+/* Subtotal */
+.subtotal {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+/* Nút xóa */
+.btn-outline-danger {
+    border-radius: 8px;
+    padding: 4px 10px;
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+}
+
+.btn-outline-danger:hover {
+    background-color: #dc3545;
+    color: white;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+/* Tổng cộng & thanh toán */
+.d-flex.justify-content-between {
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.d-flex h4 {
+    font-size: 1.3rem;
+}
+
+.d-flex a.btn {
+    font-size: 0.95rem;
+    border-radius: 8px;
+    padding: 10px 18px;
+    transition: all 0.3s;
+}
+
+.d-flex a.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Giỏ hàng trống */
+.alert-light img {
+    opacity: 0.85;
+    transition: all 0.3s;
+}
+
+.alert-light img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .table td, .table th {
+        font-size: 0.85rem;
+    }
+
+    .d-flex {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .d-flex a.btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+/* ================= GIỚI THIỆU NỘI DUNG BỔ SUNG ================= */
+.cart-extra {
+    margin-top: 50px;
+    padding: 25px;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.cart-extra h5 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #0d6efd;
+}
+
+.cart-extra p {
+    font-size: 0.95rem;
+    color: #495057;
+    line-height: 1.6;
+}
+
+.cart-extra a.btn {
+    margin-top: 15px;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    padding: 10px 20px;
+    transition: all 0.3s;
+}
+
+.cart-extra a.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
