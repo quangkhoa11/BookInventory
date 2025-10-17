@@ -63,7 +63,7 @@ if (isset($_SESSION['loaikh']) && $_SESSION['loaikh'] === 'Tổ chức') {
                 $profileLink = '#';
             }
           ?>
-          <a href="<?= $profileLink ?>" class="text-white me-3 fw-semibold">
+          <a href="<?= $profileLink ?>" class="text-white mr-3 fw-semibold">
             Chào, <?= htmlspecialchars($_SESSION['tenkh']) ?>
           </a>
           <a href="index.php?page=dangxuat" class="btn btn-outline-light">
@@ -71,7 +71,7 @@ if (isset($_SESSION['loaikh']) && $_SESSION['loaikh'] === 'Tổ chức') {
           </a>
 
         <?php elseif (isset($_SESSION['idncc'])): ?>
-          <span class="text-white me-3 fw-semibold">Chào, <?= htmlspecialchars($_SESSION['tenncc']) ?></span>
+          <span class="text-white mr-3 fw-semibold">Chào, <?= htmlspecialchars($_SESSION['tenncc']) ?></span>
           <a href="index.php?page=dangxuat" class="btn btn-outline-light">
             <i class="fas fa-sign-out-alt me-2"></i>Đăng xuất
           </a>
@@ -88,7 +88,7 @@ if (isset($_SESSION['loaikh']) && $_SESSION['loaikh'] === 'Tổ chức') {
 
         <?php else: ?>
           <!-- Chưa đăng nhập -->
-          <a href="index.php?page=dangnhap" class="btn btn-outline-light me-2">
+          <a href="index.php?page=dangnhap" class="btn btn-outline-light mr-2">
             <i class="fas fa-sign-in-alt me-2"></i> Đăng nhập
           </a>
           <a href="index.php?page=dangky" class="btn btn-warning px-3">

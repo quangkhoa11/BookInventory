@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         header("Location: index.php?page=admin");
                         break;
                     case 'Quản lý kinh doanh':
-                        header("Location: index.php?page=qlkd");
+                        header("Location: index.php?page=quanlykinhdoanh");
                         break;
                     default:
                         $error = "Vai trò không hợp lệ.";

@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if ($ncc && count($ncc) > 0) {
                 $_SESSION['idncc'] = $ncc[0]['IDNCC'];
                 $_SESSION['tenncc'] = $ncc[0]['TenNCC'];
-                header("Location: ../../index.php?page=quanlyncc");
+                header("Location: index.php?page=nhacungcap");
                 exit();
             } else {
                 $error = "Email hoặc mật khẩu nhà cung cấp không đúng!";
